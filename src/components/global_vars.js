@@ -1,13 +1,7 @@
 export const openHomePage = true;
 
-export const addThousandsSeparator = (n, thousandsSeparatorSymbol) => {
-  return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, thousandsSeparatorSymbol)
-}
-
-export const addDelay = ( function() {
-  var timer = 0;
-  return function(callback, ms) {
-      clearTimeout (timer);
-      timer = setTimeout(callback, ms);
-  };
-})();
+// NAVBAR ============================================================
+export const navTips = [
+  // token tip
+  {id: 1, tipTitle: "SQUAWK", tip: "is a token used to buy ingame items in Treasure Town."},
+]

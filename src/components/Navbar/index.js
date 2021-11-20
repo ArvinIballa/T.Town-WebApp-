@@ -6,12 +6,13 @@ import { Nav, NavbarContainer, HomeTitle, Home, HomeDiv, TitleIcon, RightMenu,
   DropMenu, DropItem, DropText, DropCheckIcon, AddressDivWrapper
 } from './NavbarElements';
 import {IMAGES} from '../../assets'
-import { addThousandsSeparator, addDelay } from '../global_vars';
+import { addThousandsSeparator, addDelay } from '../global_functions';
+import { navTips } from '../global_vars';
 
 const Navbar = () => {
   const ref = useRef(null);
 
-  // ADDRESS
+  // ADDRESS ==========================================================
   const address = '0x1234154564564564asdasdasdasd8910';
   const addressDropList = [
     {id: 1, title: "Copy Address", title2: "Copied"},
@@ -34,20 +35,17 @@ const Navbar = () => {
     }
   }
 
-  // TOKEN
+  // TOKEN =============================================================
   const tokens = 500000;
-  const navTips = [
-    {id: 1, tipTitle: "SQUAWK", tip: "is a token used to buy ingame items in Treasure Town."}, // token tip
-  ]
 
-  // TOOL TIP
+  // TOOL TIP ==========================================================
   const [toolTip, setToolTip] = useState(null);
   const openTooltip = (tip) => {
     setToolTip(tip)
   }
   const closeTooltip = () => {setToolTip(null)}
 
-  // USE EFFECT
+  // USE EFFECT ========================================================
   useEffect(() => {
     const checkIfClickedOutside = e => {
       // If the menu is open and the clicked target is not within the menu,
@@ -98,7 +96,7 @@ const Navbar = () => {
 
           <AddressDiv ref={ref}>
             <AddressDivWrapper onClick={showDropDownAddress}>
-              <AddressCircle color={0}/>
+              <AddressCircle color={address ? 0 : 1}/>
               {address ?
                 <AddressText>{address ? address.slice(0, 6) +'...' + address.slice(-4) : ''}</AddressText>
                 :
