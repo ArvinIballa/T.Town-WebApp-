@@ -1,26 +1,67 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { Nav, NavbarContainer, HomeTitle, Home, HomeDiv, TitleIcon, RightMenu, 
   TipIconDiv, TipIcon, Tip, TopTipDiv,
   AddressDiv, AddressText, AddressCircle, AddressHide, 
   TokenContainer, TokensDiv, TokensText, TokensAddIcon, TokensIcon,
+  DropMenu, DropItem, DropText, DropCheckIcon, AddressDivWrapper
 } from './NavbarElements';
 import {IMAGES} from '../../assets'
-import { addThousandsSeparator } from '../global_vars';
+import { addThousandsSeparator, addDelay } from '../global_vars';
 
 const Navbar = () => {
+  const ref = useRef(null);
 
+  // ADDRESS
   const address = '0x1234154564564564asdasdasdasd8910';
+  const addressDropList = [
+    {id: 1, title: "Copy Address", title2: "Copied"},
+    {id: 2, title: "Disconnect Wallet"},
+  ]
+  const [addressDropID, setDropAddressID] = useState(0);
+  const [dropDownAddress, setDropDownAddress] = useState(false);
+  const showDropDownAddress = () => {setDropAddressID(0); setDropDownAddress(!dropDownAddress)};
+  const dropDownAddressFunctions = (drop_id) => {
+    if (drop_id === 1) {
+      setDropAddressID(1);
+      navigator.clipboard.writeText(address);
+      addDelay(() => {
+        setDropAddressID(0);
+      }, 1000 );
+    }
+    if (drop_id === 2) {
+      setDropAddressID(2);
+      setDropDownAddress(false);
+    }
+  }
+
+  // TOKEN
   const tokens = 500000;
   const navTips = [
-    {id: 1, tipTitle:"SQUAWK", tip: "is a token used to buy ingame items in Treasure Town."}, // token tip
+    {id: 1, tipTitle: "SQUAWK", tip: "is a token used to buy ingame items in Treasure Town."}, // token tip
   ]
 
+  // TOOL TIP
   const [toolTip, setToolTip] = useState(null);
   const openTooltip = (tip) => {
     setToolTip(tip)
   }
-
   const closeTooltip = () => {setToolTip(null)}
+
+  // USE EFFECT
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (dropDownAddress && ref.current && !ref.current.contains(e.target)) {
+        setDropDownAddress(false);
+      }
+    }
+    document.addEventListener("mousedown", checkIfClickedOutside)
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside)
+    }
+  }, [dropDownAddress])
 
   return (
     <Nav>
@@ -55,13 +96,33 @@ const Navbar = () => {
             </TipIconDiv>
           </TokenContainer>
 
-          <AddressDiv>
-            <AddressCircle color={0}/>
-            {address ?
-            <AddressText>{address ? address.slice(0, 6) +'...' + address.slice(-4) : ''}</AddressText>
-            :
-            <AddressHide/>
-            }
+          <AddressDiv ref={ref}>
+            <AddressDivWrapper onClick={showDropDownAddress}>
+              <AddressCircle color={0}/>
+              {address ?
+                <AddressText>{address ? address.slice(0, 6) +'...' + address.slice(-4) : ''}</AddressText>
+                :
+                <AddressHide/>
+              }
+            </AddressDivWrapper>
+
+              { dropDownAddress === true ?
+                <DropMenu>
+                  { addressDropList.map(data =>
+                    <DropItem key={data.id} color={data.id === 1 && addressDropID === 1 ? 1 : 0} onClick={()=>dropDownAddressFunctions(data.id)}>
+                      { data.id === 1 && addressDropID === 1 ?
+                        <>
+                        <DropText>{data.title2}</DropText><DropCheckIcon/>
+                        </>
+                        :
+                        <DropText>{data.title}</DropText>
+                      }
+                    </DropItem>
+                    )
+                  }
+                </DropMenu>
+              : null
+              }
           </AddressDiv>
         </RightMenu>
       </NavbarContainer>
