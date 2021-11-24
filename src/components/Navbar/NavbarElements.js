@@ -88,10 +88,6 @@ export const AddressDiv = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-  @media screen and (max-width: 560px) {
-    padding: 8px 16px;
-  }
 `;
 
 export const AddressDivWrapper = styled.div`
@@ -144,7 +140,7 @@ export const TokenContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-right: 5%;
+  margin-right: 4%;
 `;
 
 export const TokensDiv = styled.div`

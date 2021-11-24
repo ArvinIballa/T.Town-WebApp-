@@ -12,6 +12,12 @@ import { navTips } from '../global_vars';
 const Navbar = () => {
   const ref = useRef(null);
 
+  // check width
+  const [width, setWidth] = useState(window.innerWidth);
+  const updateWindow = () => {
+    setWidth(window.innerWidth)
+  }
+
   // ADDRESS ==========================================================
   const address = '0x1234154564564564asdasdasdasd8910';
   const addressDropList = [
@@ -54,10 +60,14 @@ const Navbar = () => {
         setDropDownAddress(false);
       }
     }
-    document.addEventListener("mousedown", checkIfClickedOutside)
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    updateWindow();
+    window.addEventListener("resize", updateWindow);
     return () => {
       // Cleanup the event listener
-      document.removeEventListener("mousedown", checkIfClickedOutside)
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+      window.removeEventListener("resize", updateWindow);
     }
   }, [dropDownAddress])
 
@@ -68,7 +78,9 @@ const Navbar = () => {
         <HomeDiv>
           <Home to="/">
             <TitleIcon src={IMAGES.treasure_icon} alt="Treasure-Town"/>
+            { width < 450 ? null :
             <HomeTitle>Treasure Town</HomeTitle>
+            }
           </Home>
         </HomeDiv>
         {/* RIGHT SIDE */}

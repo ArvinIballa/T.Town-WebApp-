@@ -8,7 +8,7 @@ export const ContainerBG = styled.div`
   background: url(${IMAGES.prequel_bg}) no-repeat center center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-width: 280px;
+  min-width: 360px;
 `;
 
 export const Container = styled.div`
