@@ -58,6 +58,7 @@ export const GalleonIcon = styled.img`
   margin-right: 550px;
   margin-bottom: 60px;
   z-index: 2;
+  transition: all 0.2s ease-in-out;
 
   @media screen and (max-width: 960px) {
     height: 110px;
@@ -104,6 +105,7 @@ export const KrakenIcon = styled.img`
   margin-left: 520px;
   margin-bottom: 430px;
   z-index: 2;
+  transition: all 0.2s ease-in-out;
   
   @media screen and (max-width: 960px) {
     height: 110px;
