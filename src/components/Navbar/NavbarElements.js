@@ -167,15 +167,16 @@ export const TokensText = styled.p`
 `;
 
 export const TokensIcon = styled.img`
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   object-fit: contain;
   min-height: 20px;
   min-width: 20px;
+  margin-right: 5px;
 
   @media screen and (max-width: 560px) {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
   }
 `;
 

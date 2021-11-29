@@ -8,7 +8,7 @@ export const ContainerBG = styled.div`
   background: url(${IMAGES.prequel_bg}) no-repeat center center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-width: 360px;
+  min-width: 480px;
 `;
 
 export const Container = styled.div`
@@ -26,7 +26,7 @@ export const Container = styled.div`
 
 export const MainWrapper = styled.div`
   height: 700px;
-  width: 900px;
+  width: 1400px;
   margin: 20px 0;
 `;
 
@@ -34,133 +34,200 @@ export const MapWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   height: 100%;
   width: 100%;
+  position: relative;
 `;
 
 export const IconLink = styled(LinkR)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   border: none;
+  text-align: center;
+  margin-right: 8px;
   z-index: 2;
+  position: relative;
 `;
 
-// ASSETS ===============================================================
-export const GalleonIcon = styled.img`
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
+// ICON POSITIONS ========================================================================
+export const TarotofthePiratesIcon = styled.img`
+  height: 175px;
+  width: 175px;
+  object-fit: contain;
   cursor: pointer;
   position: absolute;
-  margin-right: 550px;
-  margin-bottom: 60px;
   z-index: 2;
+  bottom: 140px;
+  right: 310px;
   transition: all 0.2s ease-in-out;
 
-  @media screen and (max-width: 960px) {
-    height: 110px;
-    width: 110px;
-    margin-right: 350px;
-    margin-bottom: 85px;
-  }
-
-  @media screen and (max-width: 560px) {
-    height: 75px;
-    width: 75px;
-    margin-right: 250px;
-    margin-bottom: 100px;
-  }
-
-  @media screen and (max-width: 360px) {
-    height: 50px;
-    width: 50px;
-    margin-right: 175px;
-    margin-bottom: 105px;
-  }
-  
   :hover {
-    transition: all 0.2s ease-in-out;
-    height: 175px;
-    @media screen and (max-width: 960px) {
-      height: 140px;
-    }
-    @media screen and (max-width: 560px) {
-      height: 90px;
-    }
-    @media screen and (max-width: 360px) {
-      height: 60px;
-    }
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 1060px) {
+    height: 125px;
+    width: 125px;
+    right: 240px;
+  }
+  @media screen and (max-width: 768px) {
+    right: 0;
+  }
+`;
+
+export const MysticalLakeIcon = styled.img`
+  height: 175px;
+  width: 175px;
+  object-fit: contain;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  bottom: -15px;
+  right: 320px;
+  transition: all 0.2s ease-in-out;
+
+  :hover {
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 1060px) {
+    height: 125px;
+    width: 125px;
+    right: 220px;
+  }
+  @media screen and (max-width: 768px) {
+    right: 10px;
+    bottom: -5px;
+  }
+`;
+
+export const GalleonIcon = styled.img`
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  right: 55px;
+  bottom: -35px;
+  transition: all 0.2s ease-in-out;
+
+  :hover {
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 1060px) {
+    height: 125px;
+    width: 125px;
+    bottom: -25px;
+  }
+  @media screen and (max-width: 768px) {
+    top: 35px;
+    right: 15px;
+  }
+`;
+
+export const MagicPiratePotionIcon = styled.img`
+  height: 175px;
+  width: 175px;
+  object-fit: contain;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  left: 15px;
+  bottom: -50px;
+  transition: all 0.2s ease-in-out;
+
+  :hover {
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 1060px) {
+    height: 125px;
+    width: 125px;
+    bottom: -25px;
+  }
+  @media screen and (max-width: 768px) {
+    bottom: -100px;
+  }
+`;
+
+export const PearlDiverIcon = styled.img`
+  height: 175px;
+  width: 175px;
+  object-fit: contain;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  bottom: -50px;
+  left: 320px;
+  transition: all 0.2s ease-in-out;
+
+  :hover {
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 1060px) {
+    height: 125px;
+    width: 125px;
+    bottom: -25px;
+    left: 225px;
+  }
+  @media screen and (max-width: 768px) {
+    bottom: 70px;
+    left: 15px;
   }
 `;
 
 export const KrakenIcon = styled.img`
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
+  height: 175px;
+  width: 175px;
+  object-fit: contain;
   cursor: pointer;
   position: absolute;
-  margin-left: 520px;
-  margin-bottom: 430px;
   z-index: 2;
+  top: 150px;
+  right: 80px;
   transition: all 0.2s ease-in-out;
-  
-  @media screen and (max-width: 960px) {
-    height: 110px;
-    width: 110px;
-    margin-left: 335px;
-    margin-bottom: 325px;
-  }
-
-  @media screen and (max-width: 560px) {
-    height: 75px;
-    width: 75px;
-    margin-left: 230px;
-    margin-bottom: 265px;
-  }
-
-  @media screen and (max-width: 360px) {
-    height: 50px;
-    width: 50px;
-    margin-left: 165px;
-    margin-bottom: 225px;
-  }
 
   :hover {
-    transition: all 0.2s ease-in-out;
-    height: 175px;
-    @media screen and (max-width: 960px) {
-      height: 140px;
-    }
-    @media screen and (max-width: 560px) {
-      height: 90px;
-    }
-    @media screen and (max-width: 360px) {
-      height: 60px;
-    }
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 1060px) {
+    height: 125px;
+    width: 125px;
+    right: 100px;
+    top: 100px;
+  }
+  @media screen and (max-width: 768px) {
+    top: 200px;
+    right: 40px;
   }
 `;
 
-export const Map = styled.img`
-  height: 650px;
-  width: 800px;
+export const JewelFinderIcon = styled.img`
+  height: 175px;
+  width: 175px;
   object-fit: contain;
+  cursor: pointer;
   position: absolute;
-  margin-top: -125px;
+  z-index: 2;
+  top: 150px;
+  left: 75px;
+  transition: all 0.2s ease-in-out;
 
-  @media screen and (max-width: 960px) {
-    width: 500px;
+  :hover {
+    transform: scale(1.2);
   }
 
-  @media screen and (max-width: 560px) {
-    height: 400px;
-    width: 350px;
+  @media screen and (max-width: 1060px) {
+    height: 125px;
+    width: 125px;
+    top: 110px;
+    left: 50px;
   }
-
-  @media screen and (max-width: 360px) {
-    height: 250px;
-    width: 250px;
+  @media screen and (max-width: 768px) {
+    left: 0;
+    top: 150px;
   }
 `;

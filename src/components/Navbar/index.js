@@ -42,7 +42,13 @@ const Navbar = () => {
   }
 
   // TOKEN =============================================================
-  const tokens = 500000;
+  const squawk_token = 500000;
+  const ust_token = 100000;
+
+  const tokens = [
+    {id: 1, icon: IMAGES.ust_icon, token: ust_token},
+    {id: 2, icon: IMAGES.squawk_icon, token: squawk_token},
+  ]
 
   // TOOL TIP ==========================================================
   const [toolTip, setToolTip] = useState(null);
@@ -78,7 +84,7 @@ const Navbar = () => {
         <HomeDiv>
           <Home to="/">
             <TitleIcon src={IMAGES.treasure_icon} alt="Treasure-Town"/>
-            { width < 450 ? null :
+            { width < 660 ? null :
             <HomeTitle>Treasure Town</HomeTitle>
             }
           </Home>
@@ -86,25 +92,28 @@ const Navbar = () => {
         {/* RIGHT SIDE */}
         <RightMenu>
 
-          <TokenContainer>
-            <TokensDiv>
-              <TokensIcon src={IMAGES.squawk_icon}/>
-              <TokensText>{ tokens > 999999 ? "999,999+" : addThousandsSeparator(tokens, ',')}</TokensText>
-              <TokensAddIcon/>
-            </TokensDiv>
-            <TipIconDiv>
-              <TipIcon onMouseEnter={() => openTooltip(0)} onMouseLeave={closeTooltip}/>
-              { toolTip === 0 ?
-              <Tip>
-                <TopTipDiv>
-                  <TokensIcon src={IMAGES.squawk_icon}/>{navTips[0].tipTitle}
-                </TopTipDiv> {navTips[0].tip}
-              </Tip>
-              :
-              null
-              }
-            </TipIconDiv>
-          </TokenContainer>
+          { tokens.map((data,index) =>
+            <TokenContainer key={data.id}>
+              <TokensDiv>
+                <TokensIcon src={data.icon}/>
+                <TokensText>{ data.token > 999999 ? "999,999+" : addThousandsSeparator(data.token, ',')}</TokensText>
+                <TokensAddIcon/>
+              </TokensDiv>
+              <TipIconDiv>
+                <TipIcon onMouseEnter={() => openTooltip(index)} onMouseLeave={closeTooltip}/>
+                { toolTip === index ?
+                <Tip>
+                  <TopTipDiv>
+                    <TokensIcon src={data.icon}/>{navTips[index].tipTitle}
+                  </TopTipDiv> {navTips[index].tip}
+                </Tip>
+                :
+                null
+                }
+              </TipIconDiv>
+            </TokenContainer>
+          )
+          }
 
           <AddressDiv ref={ref}>
             <AddressDivWrapper onClick={showDropDownAddress}>
