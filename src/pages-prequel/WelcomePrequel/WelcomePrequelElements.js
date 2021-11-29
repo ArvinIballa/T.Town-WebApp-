@@ -50,15 +50,17 @@ export const IconLink = styled(LinkR)`
 
 // ICON POSITIONS ========================================================================
 export const TarotofthePiratesIcon = styled.img`
-  height: 175px;
+ height: 175px;
   width: 175px;
   object-fit: contain;
   cursor: pointer;
   position: absolute;
   z-index: 2;
-  bottom: 140px;
-  right: 310px;
+  bottom: -50px;
+  left: 530px;
+  
   transition: all 0.2s ease-in-out;
+  filter: grayscale(100%);
 
   :hover {
     transform: scale(1.2);
@@ -84,6 +86,7 @@ export const MysticalLakeIcon = styled.img`
   bottom: -15px;
   right: 320px;
   transition: all 0.2s ease-in-out;
+  filter: grayscale(100%);
 
   :hover {
     transform: scale(1.2);
@@ -136,6 +139,7 @@ export const MagicPiratePotionIcon = styled.img`
   left: 15px;
   bottom: -50px;
   transition: all 0.2s ease-in-out;
+  filter: grayscale(100%);
 
   :hover {
     transform: scale(1.2);
@@ -159,8 +163,9 @@ export const PearlDiverIcon = styled.img`
   position: absolute;
   z-index: 2;
   bottom: -50px;
-  left: 320px;
+  left: 280px;
   transition: all 0.2s ease-in-out;
+  filter: grayscale(100%);
 
   :hover {
     transform: scale(1.2);
@@ -186,7 +191,7 @@ export const KrakenIcon = styled.img`
   position: absolute;
   z-index: 2;
   top: 150px;
-  right: 80px;
+  right: 95px;
   transition: all 0.2s ease-in-out;
 
   :hover {
@@ -215,6 +220,7 @@ export const JewelFinderIcon = styled.img`
   top: 150px;
   left: 75px;
   transition: all 0.2s ease-in-out;
+  filter: grayscale(100%);
 
   :hover {
     transform: scale(1.2);

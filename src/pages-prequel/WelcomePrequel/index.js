@@ -40,25 +40,25 @@ const WelcomePrequel = () => {
         <MainWrapper>
           
           <MapWrapper>
-            <IconLink to="tarot-pirates">
-              <TarotofthePiratesIcon src={IMAGES.tarot_icon} alt="Tarot-Pirates"/>
+            <IconLink to="tarot-pirates" onClick={ (event) => event.preventDefault()}>
+              <TarotofthePiratesIcon  src={IMAGES.tarot_icon} alt="Tarot-Pirates"/>
             </IconLink>
-            <IconLink to="mystical-lake">
+            <IconLink to="mystical-lake" onClick={ (event) => event.preventDefault()}>
               <MysticalLakeIcon src={IMAGES.lake_icon} alt="Mystical-Lake"/>
             </IconLink>
             <IconLink to="galleon-race">
               <GalleonIcon src={IMAGES.galleon_icon} alt="Galleon-Race"/>
             </IconLink>
-            <IconLink to="pirate-potion">
+            <IconLink to="pirate-potion" onClick={ (event) => event.preventDefault()}>
               <MagicPiratePotionIcon src={IMAGES.potion_icon} alt="Magic-Pirate-Potion"/>
             </IconLink>
-            <IconLink to="pearl-diver">
+            <IconLink to="pearl-diver" onClick={ (event) => event.preventDefault()}>
               <PearlDiverIcon src={IMAGES.pearl_icon} alt="Pearl-Diver"/>
             </IconLink>
             <IconLink to="kraken-slayer">
               <KrakenIcon src={IMAGES.kraken_icon} alt="Kraken-Slayer"/>
             </IconLink>
-            <IconLink to="jewel-finder">
+            <IconLink to="jewel-finder" onClick={ (event) => event.preventDefault()}>
               <JewelFinderIcon src={IMAGES.jewel_icon} alt="Jewel-Finder"/>
             </IconLink>
           </MapWrapper>
