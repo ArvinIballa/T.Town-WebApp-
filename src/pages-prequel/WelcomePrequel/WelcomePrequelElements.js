@@ -66,13 +66,19 @@ export const TarotofthePiratesIcon = styled.img`
     transform: scale(1.2);
   }
 
+  @media screen and (max-width: 1440px) {
+    left: 310px;
+    bottom: -320px;
+  }
   @media screen and (max-width: 1060px) {
     height: 125px;
     width: 125px;
-    right: 240px;
+    left: 260px;
+    bottom: -230px;
   }
   @media screen and (max-width: 768px) {
-    right: 0;
+    left: 50px;
+    bottom: -350px;
   }
 `;
 
@@ -99,7 +105,7 @@ export const MysticalLakeIcon = styled.img`
   }
   @media screen and (max-width: 768px) {
     right: 10px;
-    bottom: -5px;
+    bottom: 25px;
   }
 `;
 
@@ -124,7 +130,7 @@ export const GalleonIcon = styled.img`
     bottom: -25px;
   }
   @media screen and (max-width: 768px) {
-    top: 35px;
+    top: -5px;
     right: 15px;
   }
 `;
@@ -151,7 +157,7 @@ export const MagicPiratePotionIcon = styled.img`
     bottom: -25px;
   }
   @media screen and (max-width: 768px) {
-    bottom: -100px;
+    bottom: -60px;
   }
 `;
 
@@ -178,7 +184,7 @@ export const PearlDiverIcon = styled.img`
     left: 225px;
   }
   @media screen and (max-width: 768px) {
-    bottom: 70px;
+    bottom: 90px;
     left: 15px;
   }
 `;
@@ -201,11 +207,11 @@ export const KrakenIcon = styled.img`
   @media screen and (max-width: 1060px) {
     height: 125px;
     width: 125px;
-    right: 100px;
+    right: 85px;
     top: 100px;
   }
   @media screen and (max-width: 768px) {
-    top: 200px;
+    top: 150px;
     right: 40px;
   }
 `;
@@ -226,14 +232,17 @@ export const JewelFinderIcon = styled.img`
     transform: scale(1.2);
   }
 
+  @media screen and (max-width: 1440px) {
+    left: 5px;
+  }
   @media screen and (max-width: 1060px) {
     height: 125px;
     width: 125px;
     top: 110px;
-    left: 50px;
+    left: 10px;
   }
   @media screen and (max-width: 768px) {
     left: 0;
-    top: 150px;
+    top: 90px;
   }
 `;
