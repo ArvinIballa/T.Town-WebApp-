@@ -46,11 +46,12 @@ export const IconLink = styled(LinkR)`
   margin-right: 8px;
   z-index: 2;
   position: relative;
+
 `;
 
 // ICON POSITIONS ========================================================================
 export const TarotofthePiratesIcon = styled.img`
- height: 175px;
+  height: 175px;
   width: 175px;
   object-fit: contain;
   cursor: pointer;
@@ -194,7 +195,7 @@ export const KrakenIcon = styled.img`
   right: 95px;
   transition: all 0.2s ease-in-out;
 
-  :hover {
+  :hover{
     transform: scale(1.2);
   }
 

@@ -7,6 +7,7 @@ import KrakenSlayer from './pages-prequel/KrakenSlayer'
 import GalleonRace from './pages-prequel/GalleonRace'
 import Error404 from './pages-others/Error404'
 import { openHomePage } from './components/global_vars';
+import Tooltip from './components/Tooltip/Tooltip'
 
 const App = () => {
   
