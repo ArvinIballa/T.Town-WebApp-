@@ -15,6 +15,11 @@ import ust_icon from './images/ust_icon.png'
 import metamask_icon from './images/metamask_icon.png'
 import loading_gif from './gifs/loading_gif.gif'
 
+
+
+import gal_gif from './gifs/gal_gif.gif'
+
+
 export const IMAGES = {
   prequel_bg,
   prequel_map,
@@ -31,8 +36,11 @@ export const IMAGES = {
   ust_icon,
   
   metamask_icon,
+
+
 }
 
 export const GIFS = {
-  loading_gif
+  loading_gif,
+  gal_gif
 }
