@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {GIFS} from '../../assets'
+import {GIFS} from '../../../assets'
 
 
 

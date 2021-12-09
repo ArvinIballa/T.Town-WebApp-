@@ -11,10 +11,11 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
-  min-width: 280px;
+  width: 100%;
+  min-width: 480px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border-bottom: 2px solid gray;
@@ -247,9 +248,9 @@ export const Tip = styled.span`
 // Drop Menu ======================================================
 export const DropMenu = styled.ul`
   background-color: rgba(0,0,0,0.8);
-  width: 130px;
+  width: 125px;
   position: absolute;
-  top: 52px;
+  top: 54px;
   text-align: center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;

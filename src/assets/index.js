@@ -8,17 +8,16 @@ import potion_icon from './images/potion_icon.png'
 import jewel_icon from './images/jewel_icon.png'
 import tarot_icon from './images/tarot_icon.png'
 
+import kraken_home_bg from './images/kraken_home_bg.png'
+import kraken_home_image from './images/kraken_home_image.png'
+
 import treasure_icon from './images/treasure_icon.png'
 import squawk_icon from './images/squawk_icon.png'
 import ust_icon from './images/ust_icon.png'
 
 import metamask_icon from './images/metamask_icon.png'
 import loading_gif from './gifs/loading_gif.gif'
-
-
-
 import gal_gif from './gifs/gal_gif.gif'
-
 
 export const IMAGES = {
   prequel_bg,
@@ -31,16 +30,17 @@ export const IMAGES = {
   jewel_icon,
   tarot_icon,
 
+  kraken_home_bg,
+  kraken_home_image,
+
   treasure_icon,
   squawk_icon,
   ust_icon,
   
   metamask_icon,
-
-
 }
 
 export const GIFS = {
   loading_gif,
-  gal_gif
+  gal_gif,
 }

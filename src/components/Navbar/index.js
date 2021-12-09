@@ -18,7 +18,23 @@ const Navbar = () => {
     setWidth(window.innerWidth)
   }
 
-  // ADDRESS ==========================================================
+  // Logo Link in Games ==========================================================
+  const logoReturnLink = () => {
+    switch (window.location.pathname) {
+      case '/prequel/kraken-slayer/play': return '/prequel/kraken-slayer';
+      case '/prequel/galleon-race/play': return '/prequel/galleon-race';
+      default: return '/';
+    }
+  }
+  const logoText = () => {
+    switch (window.location.pathname) {
+      case '/prequel/kraken-slayer/play': return 'Kraken Slayer';
+      case '/prequel/galleon-race/play': return 'Galleon Race';
+      default: return 'Treasure Town';
+    }
+  }
+
+  // ADDRESS =====================================================================
   const address = '0x1234154564564564asdasdasdasd8910';
   const addressDropList = [
     {id: 1, title: "Copy Address", title2: "Copied"},
@@ -78,14 +94,15 @@ const Navbar = () => {
   }, [dropDownAddress])
 
   return (
+    
     <Nav>
       <NavbarContainer>
         {/* LEFT SIDE */}
         <HomeDiv>
-          <Home to="/">
+          <Home to={logoReturnLink()}>
             <TitleIcon src={IMAGES.treasure_icon} alt="Treasure-Town"/>
             { width < 660 ? null :
-            <HomeTitle>Treasure Town</HomeTitle>
+            <HomeTitle>{logoText()}</HomeTitle>
             }
           </Home>
         </HomeDiv>
