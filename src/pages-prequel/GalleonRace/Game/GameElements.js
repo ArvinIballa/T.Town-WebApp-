@@ -1,13 +1,17 @@
 import styled from 'styled-components'
+import {IMAGES} from '../../../assets'
 
 export const MainContainer = styled.div`
   height: 100%;
   width: 100%;
+  background: url(${IMAGES.pirate_bird}) no-repeat center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 480px;
-  min-height: 900px;
+  min-height: 1300px;
 `;
 
 export const Container = styled.div`

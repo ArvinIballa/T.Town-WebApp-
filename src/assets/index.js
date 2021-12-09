@@ -17,7 +17,10 @@ import ust_icon from './images/ust_icon.png'
 
 import metamask_icon from './images/metamask_icon.png'
 import loading_gif from './gifs/loading_gif.gif'
+
 import gal_gif from './gifs/gal_gif.gif'
+import galleon_bg from './images/galleon_bg.PNG'
+import pirate_bird from './images/pirate_bird.png'
 
 export const IMAGES = {
   prequel_bg,
@@ -38,6 +41,8 @@ export const IMAGES = {
   ust_icon,
   
   metamask_icon,
+  galleon_bg,
+  pirate_bird
 }
 
 export const GIFS = {

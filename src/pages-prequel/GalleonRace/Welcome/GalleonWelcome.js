@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {GIFS} from '../../../assets'
+import { Link as LinkR } from 'react-router-dom';
 
 
 
@@ -10,21 +11,18 @@ export const ContainerBG = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   min-width: 480px;
-  
 `;
 
 
 export const Container = styled.div`
-  height: 100vh;
+   height: 100vh;
   width: 100%;
-  display:flex;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 20px 40px;
 
-  @media screen and (max-height: 860px) {
-    height: 100%;
-  }
 `;
 
 export const Paragraph = styled.p`
@@ -38,6 +36,8 @@ export const Paragraph = styled.p`
 
   @media screen and (max-width: 560px) {
     font-size: 12px;
+    margin-right:300px;
+    color:#fff
   }
 `;
 
@@ -50,6 +50,7 @@ export const SubParagraph = styled.p`
 
   @media screen and (max-width: 560px) {
     font-size: 12px;
+    
   }
 `;
 
@@ -64,6 +65,7 @@ export const SubPlay = styled.p`
 
   @media screen and (max-width: 560px) {
     font-size: 12px;
+    
   }
 `;
 
@@ -82,22 +84,48 @@ export const SubWin = styled.p`
 `;
 
 
-export const PlayNow = styled.b`
-    font-size: 40px;
+export const PlayNow = styled(LinkR)`
+    font-size: 30px;
     border-radius: 15px;
     background: #B57242;
     padding: 8px 16px;
     color: #26262D;
-    text-decoration: underline;
-    text-decoration-color: #B57242;
+    text-decoration: none;
     position:absolute ;
-    right: 14%;
-    bottom: 28%;
-    
-
-  
+    right: 22%;
+    bottom: 35%;
 
   @media screen and (max-width: 560px) {
     font-size: 12px;
+    margin-right:200px;
+  }
+  :hover {
+    background-color: #CABCBB;
+  }
+`;
+
+
+export const HowToPlayy = styled.button`
+    font-size: 30px;
+    border-radius: 15px;
+    background: #B57242;
+    padding: 8px 16px;
+    color: #26262D;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    position:absolute ;
+    right: 8%;
+    bottom: 35%;
+    
+    
+  @media screen and (max-width: 560px) {
+    font-size: 12px;
+    margin-right:130px;
+    
+  }
+
+  :hover {
+    background-color: #CABCBB;
   }
 `;

@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Navbar from '../../../components/Navbar';
-import { ContainerBG,Container, Paragraph, SubParagraph,SubPlay, SubWin, PlayNow
+import { ContainerBG,Container, Paragraph, SubParagraph,SubPlay, SubWin, PlayNow,HowToPlayy
 } from './GalleonWelcome';
 import { Link } from 'react-router-dom'
 
+import HowToPlay from './HowToPlay';
+
 const GalleonRaceWelcome = () => {
+
+   // open how to play modal
+   const [showHowToPlayModal, setShowHowToPlayModal] = useState(false);
+   const openHowToPlayModal = () => {setShowHowToPlayModal(true)}
+   const closeHowToPlayModal = () => {setShowHowToPlayModal(false)}
 
   return (
     <>
+    <HowToPlay showHowToPlayModal={showHowToPlayModal} closeHowToPlayModal={closeHowToPlayModal}/>
     <Navbar/>
     <ContainerBG>
         <Container>
@@ -17,7 +25,8 @@ const GalleonRaceWelcome = () => {
               </SubParagraph>
               <SubPlay>1 $UST = 1 PLAY</SubPlay>
               <SubWin>Win as much as _____</SubWin>
-              <Link to='play'><PlayNow>PLAY NOW</PlayNow></Link>
+              <PlayNow to='play'>PLAY NOW</PlayNow>
+              <HowToPlayy onClick={openHowToPlayModal}>HOW TO PLAY</HowToPlayy>
             </Paragraph>
           
           
