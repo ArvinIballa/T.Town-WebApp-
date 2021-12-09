@@ -5,7 +5,6 @@ import { Link as LinkR } from 'react-router-dom';
 export const ContainerBG = styled.div`
   height: 100%;
   width: 100%;
-  //background-image: linear-gradient(45deg, #655776, #3a294f);
   background: url(${IMAGES.kraken_home_bg}) no-repeat center center;
   background-size: cover;
   background-repeat: no-repeat;

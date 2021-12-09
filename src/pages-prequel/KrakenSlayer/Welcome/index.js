@@ -34,8 +34,8 @@ const KrakenSlayerHome = () => {
     <>
     <HowToPlay showHowToPlayModal={showHowToPlayModal} closeHowToPlayModal={closeHowToPlayModal}/>
     <Navbar/>
+
     <ContainerBG>
-      
       <Container>
         {width < 900 ? null :
         <ContainerLeft>
