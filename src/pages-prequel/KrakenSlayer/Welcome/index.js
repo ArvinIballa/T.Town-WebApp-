@@ -39,7 +39,7 @@ const KrakenSlayerHome = () => {
       <Container>
         {width < 900 ? null :
         <ContainerLeft>
-          <GameImage src={IMAGES.kraken_home_image} alt="Kraken-Slayer"/>
+          <GameImage src={IMAGES.kraken_welcome_image} alt="Kraken-Slayer"/>
         </ContainerLeft>
         }
         <ContainerRight>

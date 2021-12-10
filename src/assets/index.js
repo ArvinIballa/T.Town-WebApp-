@@ -8,8 +8,8 @@ import potion_icon from './images/potion_icon.png'
 import jewel_icon from './images/jewel_icon.png'
 import tarot_icon from './images/tarot_icon.png'
 
-import kraken_home_bg from './images/kraken_home_bg.png'
-import kraken_home_image from './images/kraken_home_image.png'
+import kraken_welcome_bg from './images/kraken_welcome_bg.png'
+import kraken_welcome_image from './images/kraken_welcome_image.png'
 
 import treasure_icon from './images/treasure_icon.png'
 import squawk_icon from './images/squawk_icon.png'
@@ -33,8 +33,8 @@ export const IMAGES = {
   jewel_icon,
   tarot_icon,
 
-  kraken_home_bg,
-  kraken_home_image,
+  kraken_welcome_bg,
+  kraken_welcome_image,
 
   treasure_icon,
   squawk_icon,

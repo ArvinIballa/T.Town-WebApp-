@@ -5,7 +5,7 @@ import { Link as LinkR } from 'react-router-dom';
 export const ContainerBG = styled.div`
   height: 100%;
   width: 100%;
-  background: url(${IMAGES.kraken_home_bg}) no-repeat center center;
+  background: url(${IMAGES.kraken_welcome_bg}) no-repeat center center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -65,6 +65,7 @@ export const GameTitle = styled.h1`
   color: ${({color}) => color? '#ec725b': '#fff'};
   font-size: 120px;
   transition: all 0.2s ease-in-out;
+  cursor: default;
 
   @media screen and (max-width: 560px) {
     font-size: 85px;
@@ -85,6 +86,7 @@ export const GameDescription = styled.p`
   margin-top: ${({design}) => design? '20px': '0'};
   transition: all 0.2s ease-in-out;
   text-align: right;
+  cursor: default;
 
   @media screen and (max-width: 560px) {
     font-size: 16px;
@@ -112,6 +114,7 @@ export const GameCost = styled.p`
   color: #fff;
   font-size: 24px;
   transition: all 0.2s ease-in-out;
+  cursor: default;
 
   @media screen and (max-width: 560px) {
     font-size: 20px;

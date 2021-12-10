@@ -4,7 +4,7 @@ import {IMAGES} from '../../../assets'
 export const MainContainer = styled.div`
   height: 100%;
   width: 100%;
-  background: url(${IMAGES.kraken_home_bg}) no-repeat center center;
+  background: url(${IMAGES.kraken_welcome_bg}) no-repeat center center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
