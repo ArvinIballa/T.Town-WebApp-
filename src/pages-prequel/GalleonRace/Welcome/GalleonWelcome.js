@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import {GIFS} from '../../../assets'
+import {GIFS, IMAGES} from '../../../assets'
 import { Link as LinkR } from 'react-router-dom';
 
 export const ContainerBG = styled.div`
   height: 100%;
   width: 100%;
-  background: url(${GIFS.gal_gif}) no-repeat center center;
+  background: url(${IMAGES.galleon}) no-repeat center center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -37,9 +37,9 @@ export const Paragraph = styled.div`
 `;
 
 export const Title = styled.p`
-  color: #000;
+  color: #147176;
   cursor: default;
-  font-size: 64px;
+  font-size: 100px;
   transition: all 0.2s ease-in-out;
 
   @media screen and (max-width: 560px) {
@@ -51,6 +51,7 @@ export const SubParagraph = styled.p`
   font-size: 36px;
   cursor: default;
   margin: 20px 0;
+  color: #caa605;
   transition: all 0.2s ease-in-out;
 
   @media screen and (max-width: 560px) {
@@ -62,9 +63,10 @@ export const SubParagraph = styled.p`
 export const SubPlay = styled.p`
   font-size: 32px;
   cursor: default;
-  text-align: right;
+  text-align: left;
   margin-right: 10px;
   transition: all 0.2s ease-in-out;
+  color: #d05b37;
 
   @media screen and (max-width: 560px) {
     font-size: 26px;
@@ -77,7 +79,8 @@ export const SubWin = styled.p`
   cursor: default;
   margin-right: 10px;
   margin-top: 15px;
-  text-align: right;
+  text-align: left;
+  color: #d05b37;
   transition: all 0.2s ease-in-out;
 
   @media screen and (max-width: 560px) {
@@ -96,18 +99,22 @@ export const ButtonsDiv = styled.div`
 export const PlayNow = styled(LinkR)`
   font-size: 26px;
   border-radius: 15px;
-  background: #B57242;
+  background: #64c6c5;
   padding: 8px 16px;
   color: #26262D;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   margin-right: 15px;
+  transition: 250ms;
 
   @media screen and (max-width: 560px) {
     font-size: 20px;
+    transition: 250ms;
   }
   :hover {
-    background-color: #CABCBB;
+    background-color: #4cdeb3;
+    transform: scale(1.05);
+    transition: 250ms;
   }
 `;
 
@@ -115,7 +122,7 @@ export const PlayNow = styled(LinkR)`
 export const HowToPlayBtn = styled.button`
   font-size: 26px;
   border-radius: 15px;
-  background: #B57242;
+  background: #2799d5;
   padding: 8px 16px;
   color: #26262D;
   text-decoration: none;
@@ -123,12 +130,16 @@ export const HowToPlayBtn = styled.button`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   margin-left: 15px;
+  transition: 250ms;
     
   @media screen and (max-width: 560px) {
     font-size: 20px;
+    transition: 250ms;
   }
 
   :hover {
-    background-color: #CABCBB;
+    background-color: #068dd6;
+    transform: scale(1.05);
+    transition: 250ms;
   }
 `;

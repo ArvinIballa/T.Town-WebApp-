@@ -2,10 +2,12 @@ import React from 'react'
 import { IMAGES } from '../../assets'
 import './Tooltip.css'
 import { Link } from 'react-router-dom'
+import Navbar from '../../components/Navbar';
 
 const Tooltip = () => {
     return (
         <>
+        <Navbar/>
             <div class='container'>
                 <div class='container-wrapper'>
                     <div class='kraken-slayer'>

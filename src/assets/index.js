@@ -21,6 +21,7 @@ import loading_gif from './gifs/loading_gif.gif'
 import gal_gif from './gifs/gal_gif.gif'
 import galleon_bg from './images/galleon_bg.PNG'
 import pirate_bird from './images/pirate_bird.png'
+import galleon from './images/galleon.png'
 
 export const IMAGES = {
   prequel_bg,
@@ -42,7 +43,8 @@ export const IMAGES = {
   
   metamask_icon,
   galleon_bg,
-  pirate_bird
+  pirate_bird,
+  galleon
 }
 
 export const GIFS = {
