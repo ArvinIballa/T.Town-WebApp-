@@ -30,6 +30,11 @@ export const Paragraph = styled.div`
   margin-bottom: 5%;
   display: flex;
   flex-direction: column;
+  padding: 24px 48px;
+  border: 1px ;
+  border-radius: 25px;
+  transition: all 0.2s ease-in-out;
+  background: rgba(0,0,0,0.3);
 
   @media screen and (max-width: 560px) {
     margin-bottom: 0;
@@ -37,7 +42,7 @@ export const Paragraph = styled.div`
 `;
 
 export const Title = styled.p`
-  color: #147176;
+  color: #FFAA5A;
   cursor: default;
   font-size: 100px;
   transition: all 0.2s ease-in-out;
@@ -51,8 +56,10 @@ export const SubParagraph = styled.p`
   font-size: 36px;
   cursor: default;
   margin: 20px 0;
-  color: #caa605;
-  transition: all 0.2s ease-in-out;
+  color: #fff;
+  
+
+
 
   @media screen and (max-width: 560px) {
     font-size: 30px;
@@ -66,7 +73,7 @@ export const SubPlay = styled.p`
   text-align: left;
   margin-right: 10px;
   transition: all 0.2s ease-in-out;
-  color: #d05b37;
+  color: #fff;
 
   @media screen and (max-width: 560px) {
     font-size: 26px;
@@ -80,7 +87,7 @@ export const SubWin = styled.p`
   margin-right: 10px;
   margin-top: 15px;
   text-align: left;
-  color: #d05b37;
+  color: #fff;
   transition: all 0.2s ease-in-out;
 
   @media screen and (max-width: 560px) {
@@ -99,9 +106,9 @@ export const ButtonsDiv = styled.div`
 export const PlayNow = styled(LinkR)`
   font-size: 26px;
   border-radius: 15px;
-  background: #64c6c5;
+  background: #64C5BA ;
   padding: 8px 16px;
-  color: #26262D;
+  color: #fff;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   margin-right: 15px;
@@ -112,7 +119,7 @@ export const PlayNow = styled(LinkR)`
     transition: 250ms;
   }
   :hover {
-    background-color: #4cdeb3;
+    background-color: #64D5BA;
     transform: scale(1.05);
     transition: 250ms;
   }
@@ -124,7 +131,7 @@ export const HowToPlayBtn = styled.button`
   border-radius: 15px;
   background: #2799d5;
   padding: 8px 16px;
-  color: #26262D;
+  color: #fff;
   text-decoration: none;
   border: none;
   cursor: pointer;

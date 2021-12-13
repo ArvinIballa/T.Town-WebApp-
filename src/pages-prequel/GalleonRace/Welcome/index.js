@@ -25,7 +25,7 @@ const GalleonRaceWelcome = () => {
               There are lots of galleon racing towards Treasure Town. Bet on who will reach it first.
             </SubParagraph>
             <SubPlay>1 $UST = 1 PLAY</SubPlay>
-            <SubWin>Win as much as _____</SubWin>
+            <SubWin>Win as much as ________</SubWin>
             <ButtonsDiv>
               <PlayNow to='play'>PLAY NOW</PlayNow>
               <HowToPlayBtn onClick={openHowToPlayModal}>HOW TO PLAY</HowToPlayBtn>
