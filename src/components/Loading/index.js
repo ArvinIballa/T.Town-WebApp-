@@ -26,7 +26,7 @@ const Loading = ({showLoading, closeLoading}) => {
 
     const timer = setInterval(() => {
       setLoadingValue((newLoading) => newLoading >=80 ? 100 : newLoading + (Math.floor(Math.random() * 20) + 1));
-    }, 1000);
+    }, 200);
 
     return () => {
       clearInterval(timer);

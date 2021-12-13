@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import {IMAGES} from '../../assets'
-import { Link as LinkR } from 'react-router-dom';
 
 export const ContainerBG = styled.div`
   height: 100%;
@@ -8,7 +7,16 @@ export const ContainerBG = styled.div`
   background: url(${IMAGES.prequel_bg}) no-repeat center center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-width: 480px;
+  min-width: 1660px;
+  @media screen and (max-width: 1440px) {
+    min-width: 1200px;
+  }
+  @media screen and (max-width: 1060px) {
+    min-width: 960px;
+  }
+  @media screen and (max-width: 768px) {
+    min-width: 480px;
+  }
 `;
 
 export const Container = styled.div`
@@ -39,66 +47,63 @@ export const MapWrapper = styled.div`
   position: relative;
 `;
 
-export const IconLink = styled(LinkR)`
-  text-decoration: none;
+export const IconDiv = styled.div`
   border: none;
-  text-align: center;
   margin-right: 8px;
-  z-index: 2;
+  z-index: 20;
   position: relative;
 
+  @media screen and (max-height: 560px) {
+    z-index: 2;
+  }
 `;
 
 // ICON POSITIONS ========================================================================
-export const TarotofthePiratesIcon = styled.img`
-  height: 175px;
-  width: 175px;
+export const Icon = styled.img`
+  height: 100%;
+  width: 100%;
   object-fit: contain;
   cursor: pointer;
-  position: absolute;
-  z-index: 2;
-  bottom: -50px;
-  left: 530px;
-  
   transition: all 0.2s ease-in-out;
-  filter: grayscale(100%);
+  filter: ${({color}) => color ? 'grayscale(100%)': null};
 
   :hover {
     transform: scale(1.2);
   }
-
+`;
+// Tarot of the Pirates ------------------------------------------
+export const TarotofthePiratesDiv = styled.div`
+  height: 175px;
+  width: 175px;
+  position: absolute;
+  bottom: -65px;
+  left: 500px;
+  transition: all 0.2s ease-in-out;
+  
   @media screen and (max-width: 1440px) {
-    left: 310px;
+    left: 240px;
     bottom: -320px;
   }
   @media screen and (max-width: 1060px) {
     height: 125px;
     width: 125px;
-    left: 260px;
+    left: 185px;
     bottom: -230px;
   }
   @media screen and (max-width: 768px) {
-    left: 50px;
+    left: -5px;
     bottom: -350px;
   }
 `;
-
-export const MysticalLakeIcon = styled.img`
+// Mystical Lake --------------------------------------------
+export const MysticalLakeDiv = styled.div`
   height: 175px;
   width: 175px;
-  object-fit: contain;
-  cursor: pointer;
   position: absolute;
-  z-index: 2;
-  bottom: -15px;
+  bottom: -50px;
   right: 320px;
   transition: all 0.2s ease-in-out;
-  filter: grayscale(100%);
-
-  :hover {
-    transform: scale(1.2);
-  }
-
+  
   @media screen and (max-width: 1060px) {
     height: 125px;
     width: 125px;
@@ -110,25 +115,19 @@ export const MysticalLakeIcon = styled.img`
   }
 `;
 
-export const GalleonIcon = styled.img`
+// Galleon Race --------------------------------------------
+export const GalleonDiv = styled.div`
   height: 200px;
   width: 200px;
-  object-fit: contain;
-  cursor: pointer;
   position: absolute;
-  z-index: 2;
   right: 55px;
-  bottom: -35px;
+  bottom: -65px;
   transition: all 0.2s ease-in-out;
-
-  :hover {
-    transform: scale(1.2);
-  }
 
   @media screen and (max-width: 1060px) {
     height: 125px;
     width: 125px;
-    bottom: -25px;
+    bottom: -55px;
   }
   @media screen and (max-width: 768px) {
     top: -5px;
@@ -136,74 +135,54 @@ export const GalleonIcon = styled.img`
   }
 `;
 
-export const MagicPiratePotionIcon = styled.img`
+// Magic Pirate Potion --------------------------------------
+export const MagicPiratePotionDiv = styled.div`
   height: 175px;
   width: 175px;
-  object-fit: contain;
-  cursor: pointer;
   position: absolute;
-  z-index: 2;
   left: 15px;
-  bottom: -50px;
+  bottom: -65px;
   transition: all 0.2s ease-in-out;
-  filter: grayscale(100%);
-
-  :hover {
-    transform: scale(1.2);
-  }
 
   @media screen and (max-width: 1060px) {
     height: 125px;
     width: 125px;
-    bottom: -25px;
+    bottom: -55px;
   }
   @media screen and (max-width: 768px) {
     bottom: -60px;
   }
 `;
 
-export const PearlDiverIcon = styled.img`
+// Pearl Diver  ---------------------------------------------
+export const PearlDiverDiv = styled.div`
   height: 175px;
   width: 175px;
-  object-fit: contain;
-  cursor: pointer;
   position: absolute;
-  z-index: 2;
-  bottom: -50px;
+  bottom: -65px;
   left: 280px;
   transition: all 0.2s ease-in-out;
-  filter: grayscale(100%);
-
-  :hover {
-    transform: scale(1.2);
-  }
 
   @media screen and (max-width: 1060px) {
     height: 125px;
     width: 125px;
-    bottom: -25px;
+    bottom: -55px;
     left: 225px;
   }
   @media screen and (max-width: 768px) {
     bottom: 90px;
-    left: 15px;
+    left: 35px;
   }
 `;
 
-export const KrakenIcon = styled.img`
+// Kraken  -------------------------------------------------
+export const KrakenDiv = styled.div`
   height: 175px;
   width: 175px;
-  object-fit: contain;
-  cursor: pointer;
   position: absolute;
-  z-index: 2;
   top: 150px;
   right: 95px;
   transition: all 0.2s ease-in-out;
-
-  :hover{
-    transform: scale(1.2);
-  }
 
   @media screen and (max-width: 1060px) {
     height: 125px;
@@ -217,21 +196,14 @@ export const KrakenIcon = styled.img`
   }
 `;
 
-export const JewelFinderIcon = styled.img`
+// Jewel Finder  --------------------------------------------
+export const JewelFinderDiv = styled.div`
   height: 175px;
   width: 175px;
-  object-fit: contain;
-  cursor: pointer;
   position: absolute;
-  z-index: 2;
   top: 150px;
   left: 75px;
   transition: all 0.2s ease-in-out;
-  filter: grayscale(100%);
-
-  :hover {
-    transform: scale(1.2);
-  }
 
   @media screen and (max-width: 1440px) {
     left: 5px;
@@ -243,7 +215,7 @@ export const JewelFinderIcon = styled.img`
     left: 10px;
   }
   @media screen and (max-width: 768px) {
-    left: 0;
+    left: 10px;
     top: 90px;
   }
 `;

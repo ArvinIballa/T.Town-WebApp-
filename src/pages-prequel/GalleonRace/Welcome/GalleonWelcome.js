@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {GIFS, IMAGES} from '../../../assets'
+import {IMAGES} from '../../../assets'
 import { Link as LinkR } from 'react-router-dom';
 
 export const ContainerBG = styled.div`
@@ -113,6 +113,7 @@ export const PlayNow = styled(LinkR)`
   transition: all 0.2s ease-in-out;
   margin-right: 15px;
   transition: 250ms;
+  text-align: center;
 
   @media screen and (max-width: 560px) {
     font-size: 20px;
@@ -138,6 +139,7 @@ export const HowToPlayBtn = styled.button`
   transition: all 0.2s ease-in-out;
   margin-left: 15px;
   transition: 250ms;
+  text-align: center;
     
   @media screen and (max-width: 560px) {
     font-size: 20px;

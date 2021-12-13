@@ -9,7 +9,6 @@ import GalleonRaceWelcome from './pages-prequel/GalleonRace/Welcome'
 import GalleonRaceGame from './pages-prequel/GalleonRace/Game'
 import Error404 from './pages-others/Error404'
 import { openHomePage } from './components/global_vars';
-import Tooltip from './components/Tooltip/Tooltip'
 
 const App = () => {
   
@@ -18,7 +17,7 @@ const App = () => {
       <Routes>
         <Route path='*' element={<Error404/>}/>
         <Route path='/' element={openHomePage ? <Home/> : <Navigate to='/prequel'/>} exact/>
-        <Route path='/prequel' element={<Tooltip/>} exact/>
+        <Route path='/prequel' element={<WelcomePrequel/>} exact/>
         <Route path='/prequel/kraken-slayer' element={<KrakenSlayerWelcome/>} exact/>
         <Route path='/prequel/kraken-slayer/play' element={<KrakenSlayerGame/>} exact/>
         <Route path='/prequel/galleon-race' element={<GalleonRaceWelcome/>} exact/>
