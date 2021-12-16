@@ -15,7 +15,7 @@ export const Modal = styled.div`
 export const ModalSection = styled.div`
   width: 480px;
   height: 500px;
-  background-image: linear-gradient( 135deg, #90F7EC 10%, #32CCBC 100%);
+  background-color: rgba(236, 114, 91, 0.9);
   border-radius: 15px;
   border: 2px solid #fff;
   

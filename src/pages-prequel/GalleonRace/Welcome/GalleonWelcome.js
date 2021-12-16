@@ -19,136 +19,162 @@ export const Container = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 20px 40px;
-`;
-
-export const Paragraph = styled.div`
-  width: 520px;
-  margin-right: 2%;
-  margin-bottom: 5%;
-  display: flex;
-  flex-direction: column;
-  padding: 24px 48px;
-  border: 1px ;
-  border-radius: 25px;
-  transition: all 0.2s ease-in-out;
-  background: rgba(0,0,0,0.3);
-
-  @media screen and (max-width: 560px) {
-    margin-bottom: 0;
-  }
-`;
-
-export const Title = styled.p`
-  color: #FFAA5A;
-  cursor: default;
-  font-size: 100px;
-  transition: all 0.2s ease-in-out;
-
-  @media screen and (max-width: 560px) {
-    font-size: 50px;
-  }
-`;
-
-export const SubParagraph = styled.p`
-  font-size: 36px;
-  cursor: default;
-  margin: 20px 0;
-  color: #fff;
-  
-
-
-
-  @media screen and (max-width: 560px) {
-    font-size: 30px;
-  }
-`;
-
-
-export const SubPlay = styled.p`
-  font-size: 32px;
-  cursor: default;
-  text-align: left;
-  margin-right: 10px;
-  transition: all 0.2s ease-in-out;
-  color: #fff;
-
-  @media screen and (max-width: 560px) {
-    font-size: 26px;
-  }
-`;
-
-
-export const SubWin = styled.p`
-  font-size: 32px;
-  cursor: default;
-  margin-right: 10px;
-  margin-top: 15px;
-  text-align: left;
-  color: #fff;
-  transition: all 0.2s ease-in-out;
-
-  @media screen and (max-width: 560px) {
-    font-size: 26px;
-  }
-`;
-
-export const ButtonsDiv = styled.div`
-  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  padding: 20px 40px;
 `;
 
-export const PlayNow = styled(LinkR)`
-  font-size: 26px;
-  border-radius: 15px;
-  background: #64C5BA ;
-  padding: 8px 16px;
-  color: #fff;
-  text-decoration: none;
+// LEFT SECTION =================================================================
+export const ContainerLeft = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+`;
+
+export const GameImage = styled.img`  
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+  min-height: 320px;
+  min-width: 320px;
+`;
+
+// RIGHT SECTION ================================================================
+export const ContainerRight = styled.div`
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 5%;
+`;
+
+export const GameTitleDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 20px;
+`;
+
+export const GameTitle = styled.h1`
+  color: ${({color}) => color? '#ec725b': '#fff'};
+  font-size: 120px;
   transition: all 0.2s ease-in-out;
-  margin-right: 15px;
-  transition: 250ms;
-  text-align: center;
+  cursor: default;
+
+  @media screen and (max-width: 560px) {
+    font-size: 85px;
+  }
+`;
+
+export const GameDescriptionDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 35px;
+`;
+
+export const GameDescription = styled.p`
+  color: ${({design}) => design? '#ec725b': '#fff'};
+  font-size: ${({design}) => design? '18px': '20px'};
+  font-weight: ${({design}) => design? 'bold': 'normal'};
+  margin-top: ${({design}) => design? '20px': '0'};
+  transition: all 0.2s ease-in-out;
+  text-align: right;
+  cursor: default;
+
+  @media screen and (max-width: 560px) {
+    font-size: 16px;
+  }
+`;
+
+export const GameCostDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const GameCostWrapper = styled.div`
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 48px;
+  border: 1px solid #f66b5f;
+  border-radius: 10px;
+`;
+
+export const GameCost = styled.p`
+  color: #fff;
+  font-size: 24px;
+  transition: all 0.2s ease-in-out;
+  cursor: default;
 
   @media screen and (max-width: 560px) {
     font-size: 20px;
-    transition: 250ms;
-  }
-  :hover {
-    background-color: #64D5BA;
-    transform: scale(1.05);
-    transition: 250ms;
   }
 `;
 
+export const GameButtonDiv = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 35px;
+`;
 
-export const HowToPlayBtn = styled.button`
-  font-size: 26px;
-  border-radius: 15px;
-  background: #2799d5;
-  padding: 8px 16px;
-  color: #fff;
+export const GameButton1 = styled(LinkR)`
+  text-align: center;
+  cursor: pointer;
   text-decoration: none;
   border: none;
-  cursor: pointer;
+  background-color: #ec725b;
+  color: #fff;
   transition: all 0.2s ease-in-out;
-  margin-left: 15px;
-  transition: 250ms;
-  text-align: center;
-    
-  @media screen and (max-width: 560px) {
-    font-size: 20px;
-    transition: 250ms;
+  padding: 20px;
+  margin-right: 7.5px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 160px;
+  :hover {
+    background-color: #f66b5f;
   }
 
+  @media screen and (max-width: 560px) {
+    font-size: 14px;
+    width: 140px;
+  }
+`;
+
+export const GameButton2 = styled.button`
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background-color: #ec725b;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  padding: 20px;
+  margin-left: 7.5px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 160px;
+
   :hover {
-    background-color: #068dd6;
-    transform: scale(1.05);
-    transition: 250ms;
+    background-color: #f66b5f;
+  }
+
+  @media screen and (max-width: 560px) {
+    font-size: 14px;
+    width: 140px;
   }
 `;
