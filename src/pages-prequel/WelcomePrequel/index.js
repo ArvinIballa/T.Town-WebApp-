@@ -24,13 +24,13 @@ const WelcomePrequel = () => {
 
   // Game Data -----------------
   const gameData = [
-    {id: 0, lock: true, icon: IMAGES.pearl_icon, title: "Pearl Diver", category: "Coming Soon", description: "lore magna aliqu quis nostrud exercitation ul", path: 'pearl-diver'},
-    {id: 1, lock: true, icon: IMAGES.lake_icon, title: "Mystical Lake", category: "Coming Soon", description: "lore magna aliqu quis nostrud exercitation ul", path: 'mystical-lake'},
-    {id: 2, lock: true, icon: IMAGES.potion_icon, title: "Magic Pirate Potion", category: "Coming Soon", description: "lore magna aliqu quis nostrud exercitation ul", path: 'pirate-potion'},
-    {id: 3, lock: false, icon: IMAGES.galleon_icon, title: "Galleon Race", category: "Racing", description: "lore magna aliqu quis nostrud exercitation ul", path: 'galleon-race'},
-    {id: 4, lock: true, icon: IMAGES.jewel_icon, title: "Jewel Finder", category: "Coming Soon", description: "lore magna aliqu quis nostru quis nostrudliqu quis nostrud exercitation ul lore magna aliqu quis nostrud exercitation ullore magna aliqu quis nostrud exercitation ul", path: 'jewel-finder'},
-    {id: 5, lock: false, icon: IMAGES.kraken_icon, title: "Kraken Slayer", category: "Combat Battle", description: "lore lore magna aliqu quis nostrud ", path: 'kraken-slayer'},
-    {id: 6, lock: true, icon: IMAGES.tarot_icon, title: "Tarot of the Pirates", category: "Coming Soon", description: "lore magna aliqu quis nostrud exercitation ul", path: 'tarot-pirates'},
+    {id: 0, lock: true, lockButton: true, icon: IMAGES.pearl_icon, title: "Pearl Diver", category: "Coming Soon", description: "lore magna aliqu quis nostrud exercitation ul", path: 'pearl-diver'},
+    {id: 1, lock: true, lockButton: true, icon: IMAGES.lake_icon, title: "Mystical Lake", category: "Coming Soon", description: "lore magna aliqu quis nostrud exercitation ul", path: 'mystical-lake'},
+    {id: 2, lock: true, lockButton: true, icon: IMAGES.potion_icon, title: "Magic Pirate Potion", category: "Coming Soon", description: "lore magna aliqu quis nostrud exercitation ul", path: 'pirate-potion'},
+    {id: 3, lock: false, lockButton: true, icon: IMAGES.galleon_icon, title: "Galleon Race", category: "Racing", description: "lore magna aliqu quis nostrud exercitation ul", path: 'galleon-race'},
+    {id: 4, lock: true, lockButton: true, icon: IMAGES.jewel_icon, title: "Jewel Finder", category: "Coming Soon", description: "lore magna aliqu quis nostru quis nostrudliqu quis nostrud exercitation ul lore magna aliqu quis nostrud exercitation ullore magna aliqu quis nostrud exercitation ul", path: 'jewel-finder'},
+    {id: 5, lock: false, lockButton: true, icon: IMAGES.kraken_icon, title: "Kraken Slayer", category: "Combat Battle", description: "lore lore magna aliqu quis nostrud ", path: 'kraken-slayer'},
+    {id: 6, lock: true, lockButton: true, icon: IMAGES.tarot_icon, title: "Tarot of the Pirates", category: "Coming Soon", description: "lore magna aliqu quis nostrud exercitation ul", path: 'tarot-pirates'},
   ]
 
   // Tooltip functions ---------
@@ -64,7 +64,7 @@ const WelcomePrequel = () => {
                 <Tooltip 
                   showTooltip={tooltip === 0 ? true : false} gameIcon={gameData[0].icon} gameTitle={gameData[0].title} 
                   gameCategory={gameData[0].category} gameDescription={gameData[0].description} gameLock={gameData[0].lock === true ? 1 : 0}
-                  gamePath={gameData[0].path}
+                  gameLockButton={gameData[0].lockButton === false ? 1 : 0} gamePath={gameData[0].path}
                 />
                 <Icon color={gameData[0].lock === true ? 1 : 0} src={gameData[0].icon} alt="Pearl-Diver"/>
               </PearlDiverDiv>
@@ -75,7 +75,7 @@ const WelcomePrequel = () => {
                 <Tooltip 
                   showTooltip={tooltip === 1 ? true : false} gameIcon={gameData[1].icon} gameTitle={gameData[1].title} 
                   gameCategory={gameData[1].category} gameDescription={gameData[1].description} gameLock={gameData[1].lock === true ? 1 : 0}
-                  gamePath={gameData[1].path}
+                  gameLockButton={gameData[1].lockButton === false ? 1 : 0} gamePath={gameData[1].path}
                 />
                 <Icon color={gameData[1].lock === true ? 1 : 0} src={gameData[1].icon} alt="Mystical-Lake"/>
               </MysticalLakeDiv>
@@ -86,7 +86,7 @@ const WelcomePrequel = () => {
                 <Tooltip 
                   showTooltip={tooltip === 2 ? true : false} gameIcon={gameData[2].icon} gameTitle={gameData[2].title} 
                   gameCategory={gameData[2].category} gameDescription={gameData[2].description} gameLock={gameData[2].lock === true ? 1 : 0}
-                  gamePath={gameData[2].path}
+                  gameLockButton={gameData[2].lockButton === false ? 1 : 0} gamePath={gameData[2].path}
                 />
                 <Icon color={gameData[2].lock === true ? 1 : 0} src={gameData[2].icon} alt="Magic-Pirate-Potion"/>
               </MagicPiratePotionDiv>
@@ -97,7 +97,7 @@ const WelcomePrequel = () => {
                 <Tooltip 
                   showTooltip={tooltip === 3 ? true : false} gameIcon={gameData[3].icon} gameTitle={gameData[3].title} 
                   gameCategory={gameData[3].category} gameDescription={gameData[3].description} gameLock={gameData[3].lock === true ? 1 : 0}
-                  gamePath={gameData[3].path}
+                  gameLockButton={gameData[3].lockButton === false ? 1 : 0} gamePath={gameData[3].path}
                 />
                 <Icon color={gameData[3].lock === true ? 1 : 0} src={gameData[3].icon} alt="Galleon-Race"/>
               </GalleonDiv>
@@ -109,7 +109,7 @@ const WelcomePrequel = () => {
                 <Tooltip 
                   showTooltip={tooltip === 4 ? true : false} gameIcon={gameData[4].icon} gameTitle={gameData[4].title} 
                   gameCategory={gameData[4].category} gameDescription={gameData[4].description} gameLock={gameData[4].lock === true ? 1 : 0}
-                  gamePath={gameData[4].path}
+                  gameLockButton={gameData[4].lockButton === false ? 1 : 0} gamePath={gameData[4].path}
                 />
                 <Icon color={gameData[4].lock === true ? 1 : 0} src={gameData[4].icon} alt="Jewel-Finder"/>
               </JewelFinderDiv>
@@ -120,7 +120,7 @@ const WelcomePrequel = () => {
                 <Tooltip 
                   showTooltip={tooltip === 5 ? true : false} gameIcon={gameData[5].icon} gameTitle={gameData[5].title} 
                   gameCategory={gameData[5].category} gameDescription={gameData[5].description} gameLock={gameData[5].lock === true ? 1 : 0}
-                  gamePath={gameData[5].path}
+                  gameLockButton={gameData[5].lockButton === false ? 1 : 0} gamePath={gameData[5].path}
                 />
                 <Icon color={gameData[5].lock === true ? 1 : 0} src={gameData[5].icon} alt="Kraken-Slayer"/>
               </KrakenDiv>
@@ -131,7 +131,7 @@ const WelcomePrequel = () => {
                 <Tooltip 
                   showTooltip={tooltip === 6 ? true : false} gameIcon={gameData[6].icon} gameTitle={gameData[6].title} 
                   gameCategory={gameData[6].category} gameDescription={gameData[6].description} gameLock={gameData[6].lock === true ? 1 : 0}
-                  gamePath={gameData[6].path}
+                  gameLockButton={gameData[6].lockButton === false ? 1 : 0} gamePath={gameData[6].path}
                 />
                 <Icon color={gameData[6].lock === true ? 1 : 0} src={gameData[6].icon} alt="Tarot-Pirates"/>
               </TarotofthePiratesDiv>

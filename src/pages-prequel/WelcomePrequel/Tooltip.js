@@ -3,7 +3,7 @@ import { BottomSection, Category, Container, Description, Icon, IconLock, MidSec
   PlayButton, PlayButtonLock, Title, TitleDiv, TopSection, Wrapper 
 } from './TooltipElements';
 
-const Tooltip = ({showTooltip, gameIcon, gameTitle, gameCategory, gameDescription, gameLock, gamePath}) => {
+const Tooltip = ({showTooltip, gameIcon, gameTitle, gameCategory, gameDescription, gameLock, gameLockButton, gamePath}) => {
 
   return (
     <Container show={showTooltip === true ? 1 : 0}>
@@ -23,7 +23,7 @@ const Tooltip = ({showTooltip, gameIcon, gameTitle, gameCategory, gameDescriptio
           <Description>{gameDescription}</Description>
         </MidSection>
         <BottomSection>
-          { gameLock === 1 ?
+          { gameLockButton === 1 ?
             <PlayButtonLock>Play Now</PlayButtonLock>
             :
             <PlayButton to={gamePath}>Play Now</PlayButton>

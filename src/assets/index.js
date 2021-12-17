@@ -22,6 +22,16 @@ import gal_gif from './gifs/gal_gif.gif'
 import galleon_bg from './images/galleon_bg.PNG'
 import pirate_bird from './images/pirate_bird.png'
 import galleon from './images/galleon.png'
+import pearl_bg from './images/PearlDiverbg.jpg'
+import pearl_welcome from './images/pearl_diver_welcome.png'
+
+import mystical_lake_bg from './images/Mystical_lake_bg.jpg'
+
+import magic_pirate_potion from './images/magic_potion_bg.jpg'
+
+import tarot_bg from './images/tarot_bg.png'
+
+import jewel_finder_bg from './images/jewel_finder_bg.jpg'
 
 export const IMAGES = {
   prequel_bg,
@@ -44,7 +54,18 @@ export const IMAGES = {
   metamask_icon,
   galleon_bg,
   pirate_bird,
-  galleon
+  galleon,
+
+  pearl_bg,
+  pearl_welcome,
+
+  mystical_lake_bg,
+
+  magic_pirate_potion,
+
+  jewel_finder_bg,
+
+  tarot_bg
 }
 
 export const GIFS = {
