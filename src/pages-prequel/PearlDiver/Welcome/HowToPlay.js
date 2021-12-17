@@ -34,6 +34,7 @@ const HowToPlay = ({showHowToPlayModal, closeHowToPlayModal}) => {
                 )}
 
               </ModalSubtitleDiv>
+              <ModalSubtitle style={{color:'red'}}>*Note that the probability of winning prizes will be tiered depending on level of Underwater Suit Skin.</ModalSubtitle>
               <ModalButtonDiv>
                 <ModalButton onClick={closeHowToPlayModal}>Understood</ModalButton>
               </ModalButtonDiv>
