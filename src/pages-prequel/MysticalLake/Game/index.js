@@ -10,7 +10,7 @@ const MysticalLakeGame = () => {
       <Navbar/>
       <MainContainer>
         <Container>
-          <h1>Mystical Lake</h1>
+          <h1>Mystical Lake Game</h1>
         </Container>
       </MainContainer>
     </>

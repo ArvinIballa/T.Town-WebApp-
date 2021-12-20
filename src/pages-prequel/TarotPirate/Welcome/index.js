@@ -7,9 +7,8 @@ import { ContainerBG, Container, ContainerLeft, ContainerRight,
 } from './WelcomeElements';
 import {IMAGES} from '../../../assets'
 import HowToPlay from './HowToPlay';
-import PearlDiverGame from '../Game';
 
-const TarotofthePiratesHome = () => {
+const TarotofthePiratesWelcome = () => {
 
   // open how to play modal
   const [showHowToPlayModal, setShowHowToPlayModal] = useState(false);
@@ -75,4 +74,4 @@ const TarotofthePiratesHome = () => {
   );
 }
 
-export default TarotofthePiratesHome;
+export default TarotofthePiratesWelcome;

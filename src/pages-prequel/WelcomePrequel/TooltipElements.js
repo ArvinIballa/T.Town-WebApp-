@@ -19,17 +19,6 @@ export const Container = styled.div`
   opacity: ${({show}) => show ? '1': '0'};
   transition: 0.3s;
   z-index: 20;
-
-  @media screen and (max-width: 1060px) {
-    right: -120px;
-    width: 320px;
-  }
-  @media screen and (max-width: 768px) {
-    top: -240px;
-    right: -105px;
-    width: 280px;
-    min-width: 280px;
-  }
 `;
 
 export const Wrapper = styled.div`
@@ -71,19 +60,11 @@ export const Title = styled.p`
   font-size: 20px;
   color: #333;
   font-weight: bold;
-
-  @media screen and (max-width: 768px) {
-    font-size: 18px;
-  }
 `;
 
 export const Category = styled.p`
   font-size: 15px;
   color: #969696;
-
-  @media screen and (max-width: 768px) {
-    font-size: 13px;
-  }
 `;
 
 // Mid --------------------------------------------
@@ -118,10 +99,6 @@ export const Description = styled.p`
   height: 100%;
   font-size: 17px;
   color: #272727;
-
-  @media screen and (max-width: 768px) {
-    font-size: 13px;
-  }
 `;
 
 // Bottom -----------------------------------------

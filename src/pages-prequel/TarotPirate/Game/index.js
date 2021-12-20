@@ -3,18 +3,18 @@ import Navbar from '../../../components/Navbar';
 import { Container, MainContainer } from './GameElements';
 
 
-const TarotofthePirates = () => {
+const TarotofthePiratesGame = () => {
 
   return (
     <>
       <Navbar/>
       <MainContainer>
         <Container>
-          <h1>Tarot of the Pirates</h1>
+          <h1>Tarot of the Pirates Game</h1>
         </Container>
       </MainContainer>
     </>
   );
 }
 
-export default TarotofthePirates;
+export default TarotofthePiratesGame;

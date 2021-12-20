@@ -8,7 +8,7 @@ import { ContainerBG, Container, ContainerLeft, ContainerRight,
 import {IMAGES} from '../../../assets'
 import HowToPlay from './HowToPlay';
 
-const KrakenSlayerHome = () => {
+const KrakenSlayerWelcome = () => {
 
   // open how to play modal
   const [showHowToPlayModal, setShowHowToPlayModal] = useState(false);
@@ -71,4 +71,4 @@ const KrakenSlayerHome = () => {
   );
 }
 
-export default KrakenSlayerHome;
+export default KrakenSlayerWelcome;

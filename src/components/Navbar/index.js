@@ -23,6 +23,11 @@ const Navbar = () => {
     switch (window.location.pathname) {
       case '/prequel/kraken-slayer/play': return '/prequel/kraken-slayer';
       case '/prequel/galleon-race/play': return '/prequel/galleon-race';
+      case '/prequel/pearl-diver/play': return '/prequel/pearl-diver';
+      case '/prequel/mystical-lake/play': return '/prequel/mystical-lake';
+      case '/prequel/pirate-potion/play': return '/prequel/pirate-potion';
+      case '/prequel/tarot-pirates/play': return '/prequel/tarot-pirates';
+      case '/prequel/jewel-finder/play': return '/prequel/jewel-finder';
       default: return '/';
     }
   }
@@ -30,6 +35,11 @@ const Navbar = () => {
     switch (window.location.pathname) {
       case '/prequel/kraken-slayer/play': return 'Kraken Slayer';
       case '/prequel/galleon-race/play': return 'Galleon Race';
+      case '/prequel/pearl-diver/play': return 'Pearl Diver';
+      case '/prequel/mystical-lake/play': return 'Mystical Lake';
+      case '/prequel/pirate-potion/play': return 'Magic Pirate Potion';
+      case '/prequel/tarot-pirates/play': return 'Tarot of the Pirates';
+      case '/prequel/jewel-finder/play': return 'Jewel Finder';
       default: return 'Treasure Town';
     }
   }

@@ -8,21 +8,12 @@ export const ContainerBG = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   min-width: 1660px;
-  @media screen and (max-width: 1440px) {
-    min-width: 1200px;
-  }
-  @media screen and (max-width: 1060px) {
-    min-width: 960px;
-  }
-  @media screen and (max-width: 768px) {
-    min-width: 480px;
-  }
 `;
 
 export const Container = styled.div`
   height: 100vh;
   width: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px;
@@ -79,21 +70,6 @@ export const TarotofthePiratesDiv = styled.div`
   bottom: -65px;
   left: 500px;
   transition: all 0.2s ease-in-out;
-  
-  @media screen and (max-width: 1440px) {
-    left: 240px;
-    bottom: -320px;
-  }
-  @media screen and (max-width: 1060px) {
-    height: 125px;
-    width: 125px;
-    left: 185px;
-    bottom: -230px;
-  }
-  @media screen and (max-width: 768px) {
-    left: -5px;
-    bottom: -350px;
-  }
 `;
 // Mystical Lake --------------------------------------------
 export const MysticalLakeDiv = styled.div`
@@ -103,16 +79,6 @@ export const MysticalLakeDiv = styled.div`
   bottom: -50px;
   right: 320px;
   transition: all 0.2s ease-in-out;
-  
-  @media screen and (max-width: 1060px) {
-    height: 125px;
-    width: 125px;
-    right: 220px;
-  }
-  @media screen and (max-width: 768px) {
-    right: 10px;
-    bottom: 25px;
-  }
 `;
 
 // Galleon Race --------------------------------------------
@@ -123,16 +89,6 @@ export const GalleonDiv = styled.div`
   right: 55px;
   bottom: -65px;
   transition: all 0.2s ease-in-out;
-
-  @media screen and (max-width: 1060px) {
-    height: 125px;
-    width: 125px;
-    bottom: -55px;
-  }
-  @media screen and (max-width: 768px) {
-    top: -5px;
-    right: 15px;
-  }
 `;
 
 // Magic Pirate Potion --------------------------------------
@@ -143,15 +99,6 @@ export const MagicPiratePotionDiv = styled.div`
   left: 15px;
   bottom: -65px;
   transition: all 0.2s ease-in-out;
-
-  @media screen and (max-width: 1060px) {
-    height: 125px;
-    width: 125px;
-    bottom: -55px;
-  }
-  @media screen and (max-width: 768px) {
-    bottom: -60px;
-  }
 `;
 
 // Pearl Diver  ---------------------------------------------
@@ -162,17 +109,6 @@ export const PearlDiverDiv = styled.div`
   bottom: -65px;
   left: 280px;
   transition: all 0.2s ease-in-out;
-
-  @media screen and (max-width: 1060px) {
-    height: 125px;
-    width: 125px;
-    bottom: -55px;
-    left: 225px;
-  }
-  @media screen and (max-width: 768px) {
-    bottom: 90px;
-    left: 35px;
-  }
 `;
 
 // Kraken  -------------------------------------------------
@@ -183,17 +119,6 @@ export const KrakenDiv = styled.div`
   top: 150px;
   right: 95px;
   transition: all 0.2s ease-in-out;
-
-  @media screen and (max-width: 1060px) {
-    height: 125px;
-    width: 125px;
-    right: 85px;
-    top: 100px;
-  }
-  @media screen and (max-width: 768px) {
-    top: 150px;
-    right: 40px;
-  }
 `;
 
 // Jewel Finder  --------------------------------------------
@@ -204,18 +129,4 @@ export const JewelFinderDiv = styled.div`
   top: 150px;
   left: 75px;
   transition: all 0.2s ease-in-out;
-
-  @media screen and (max-width: 1440px) {
-    left: 5px;
-  }
-  @media screen and (max-width: 1060px) {
-    height: 125px;
-    width: 125px;
-    top: 110px;
-    left: 10px;
-  }
-  @media screen and (max-width: 768px) {
-    left: 10px;
-    top: 90px;
-  }
 `;

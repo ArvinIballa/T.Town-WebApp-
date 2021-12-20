@@ -7,9 +7,8 @@ import { ContainerBG, Container, ContainerLeft, ContainerRight,
 } from './WelcomeElements';
 import {IMAGES} from '../../../assets'
 import HowToPlay from './HowToPlay';
-import PearlDiverGame from '../Game';
 
-const PearlDiverHome = () => {
+const PearlDiverWelcome = () => {
 
   // open how to play modal
   const [showHowToPlayModal, setShowHowToPlayModal] = useState(false);
@@ -50,7 +49,7 @@ const PearlDiverHome = () => {
           </GameTitleDiv>
           <GameDescriptionDiv>
             <GameDescription design={0}>Treasure Town’s surrounding sea is home to the most coveted mother black pearl. Dive in and collect as many black pearls as possible.
-</GameDescription>
+          </GameDescription>
             <GameDescription design={1}>#TreasureTown #NFTGame #PlayToEarn</GameDescription>
           </GameDescriptionDiv>
 
@@ -77,4 +76,4 @@ const PearlDiverHome = () => {
   );
 }
 
-export default PearlDiverHome;
+export default PearlDiverWelcome;

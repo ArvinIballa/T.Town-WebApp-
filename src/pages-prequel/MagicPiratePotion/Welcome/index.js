@@ -7,9 +7,8 @@ import { ContainerBG, Container, ContainerLeft, ContainerRight,
 } from './WelcomeElements';
 import {IMAGES} from '../../../assets'
 import HowToPlay from './HowToPlay';
-import PearlDiverGame from '../Game';
 
-const MagicPiratePotionHome = () => {
+const MagicPiratePotionWelcome = () => {
 
   // open how to play modal
   const [showHowToPlayModal, setShowHowToPlayModal] = useState(false);
@@ -76,4 +75,4 @@ const MagicPiratePotionHome = () => {
   );
 }
 
-export default MagicPiratePotionHome;
+export default MagicPiratePotionWelcome ;

@@ -10,7 +10,7 @@ const MagicPiratePotionGame = () => {
       <Navbar/>
       <MainContainer>
         <Container>
-          <h1>Magic Pirate Potion</h1>
+          <h1>Magic Pirate Potion Game</h1>
         </Container>
       </MainContainer>
     </>
