@@ -63,9 +63,13 @@ export const GameTitleDiv = styled.div`
 
 export const GameTitle = styled.h1`
   color: ${({color}) => color? '#001dba': '#1ed6da'};
-  font-size: 90px;
+  font-size: 110px;
   transition: all 0.2s ease-in-out;
   cursor: default;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 90px;
+  }
 
   @media screen and (max-width: 560px) {
     font-size: 85px;
